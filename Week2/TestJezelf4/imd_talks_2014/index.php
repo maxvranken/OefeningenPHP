@@ -1,3 +1,31 @@
+<?php
+function canLogin( $p_username, $p_password, $p_fullname)
+{
+	if ( $p_username == "max@mail.com" && $p_password == "secret" && $p_fullname == "Max" ) {
+		return true;
+	} else {
+		return false;
+	}
+};
+
+if ( !empty( $_POST ) ) {
+	$username = $_POST['email'];
+	$password = $_POST['password'];
+	$fullname = $_POST['name'];
+
+	if ( canLogin($username, $password, $fullname)  ) {
+		session_start();
+		$_SESSION['loggedin'] = "yes";
+
+		header('Location: createpost.php');
+	}
+}
+?>
+
+
+
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,18 +36,16 @@
 	
 </head>
 <body>
+<?php if(isset($_SESSION['loggedin'])): ?>
 	<nav>
 
-
-		<?php if(isset($_SESSION['loggedin'])): ?>
 			<a href="logout.php">Logout</a>
-		<?php else: ?>
-			<a href="index.php">Login</a>
-		<?php endif; ?>
-
 
 
 	</nav>
+<?php else: ?>
+
+<?php endif; ?>
 
 	<header>
 		<h1>Welcome to IMD-Talks</h1>
