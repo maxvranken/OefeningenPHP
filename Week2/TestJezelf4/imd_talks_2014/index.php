@@ -27,17 +27,7 @@
 	</header>
 	
 	<div id="rightside">	
-	<section id="login">
-		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-		<input type="text" name="username" placeholder="Email" />
-		<input type="password" name="password" placeholder="Password" />
-		<input type="checkbox" name="rememberme" value="yes" id="rememberme">
-		<label for="rememberme">Remember me</label>
 
-		<input type="submit" name="btnLogin" value="Sign in" />
-		</form>
-		
-	</section>	
 	
 	<section id="signup">
 	
