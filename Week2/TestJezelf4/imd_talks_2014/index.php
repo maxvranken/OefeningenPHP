@@ -1,7 +1,7 @@
 <?php
 function canLogin( $p_username, $p_password, $p_fullname)
 {
-	if ( $p_username == "max@mail.com" && $p_password == "secret" && $p_fullname == "Max" ) {
+	if ( !empty($p_username && $p_password && $p_fullname)) {
 		return true;
 	} else {
 		return false;
@@ -21,6 +21,7 @@ if ( !empty( $_POST ) ) {
 	}
 }
 ?>
+
 
 
 
