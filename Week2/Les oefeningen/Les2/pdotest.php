@@ -1,28 +1,39 @@
 <?php
+$sservername = "46.21.173.241";
+$uusername = "rubenpd169_Admin";
+$ppassword = "MaxVincentRuben";
 
-if( !empty( $_POST ) ){
-    $email = $_POST['email'];
-    $username =$_POST['username'];
-    $options = $options = [
-        'cost' => 12
-    ];
+    $conn = new PDO("mysql:host=$sservername; dbname=rubenpd169_DiveAdvisor", $uusername, $ppassword);
 
-    //$password = password_hash($_POST['password'], PASSWORD_DEFAULT, $options);
-    $password = hash('SHA256', $_POST['password']);
 
-    // connectie
-    $conn = new mysqli("46.21.173.241", "rubenpd169_Admin", "MaxVincentRuben", "rubenpd169_DiveAdvisor");
-    if( $conn->connect_errno ){
-        die("No database connection");
+
+$posts = $conn->query("select * from posts");
+
+
+if( !empty( $_POST ) ) {
+
+
+    if (!empty($_POST)) {
+        $email = $_POST['email'];
+        $username = $_POST['username'];
+        $options = $options = [
+            'cost' => 12
+        ];
+        $password = hash('SHA256', $_POST['password']);
+
+        $statement = $conn->prepare("insert into USER (Username, Password, Email) values (:username, :password, :email)");
+        $statement->bindParam(":username", $username);
+        $statement->bindParam(":password", $password);
+        $statement->bindParam(":email", $email);
+        $statement->execute();
     }
+
 
     // query
-    $query = "insert into USER (Username, Password, Email) values ('$email' , '$password','$username');";
-    if( $conn->query( $query ) ){
-        $success = "Welcome aboard!";
-    }
-}
 
+
+
+}
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
