@@ -4,6 +4,9 @@ function canLogin( $p_username, $p_password ){
  //   $p_password = hash('SHA256', $p_password);
     $conn = new mysqli("localhost", "root", "", "imd");
 
+
+
+
     $sql = "select * from users
                 where email = '".$conn->real_escape_string($p_username)."'
                 and password = '$p_password'";

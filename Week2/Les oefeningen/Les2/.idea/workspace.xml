@@ -21,33 +21,15 @@
     <favorites_list name="Les2" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="toepassing_launch_page.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/toepassing_launch_page.php">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../../../DiveAdvisor/DiveAdvisor/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.88461536">
-              <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.23250201">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
-                <marker date="1456839586053" expanded="true" signature="260:596" placeholder="..." />
-                <marker date="1456839586053" expanded="true" signature="267:310" placeholder="..." />
-                <marker date="1456839586053" expanded="true" signature="267:596" placeholder="..." />
-                <marker date="1456839586053" expanded="true" signature="409:596" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28196147">
-              <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
-              <folding>
-                <marker date="1456843643443" expanded="true" signature="474:536" placeholder="insert into users... " />
-                <marker date="1456843643443" expanded="true" signature="778:797" placeholder="..." />
-                <marker date="1456843643443" expanded="true" signature="969:985" placeholder="..." />
-                <marker date="1456843643443" expanded="true" signature="1096:1121" placeholder="..." />
-                <marker date="1456843643443" expanded="true" signature="1195:1229" placeholder="..." />
+                <marker date="1457285729530" expanded="true" signature="249:268" placeholder="select * fro... posts" />
+                <marker date="1457285729530" expanded="true" signature="645:727" placeholder="insert into USER... " />
               </folding>
             </state>
           </provider>
@@ -60,6 +42,9 @@
       <list>
         <option value="$PROJECT_DIR$/toepassing_launch_page.php" />
         <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/../../../../DiveAdvisor/DiveAdvisor/index.php" />
+        <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/../../../../DiveAdvisor/DiveAdvisor/php/login.php" />
       </list>
     </option>
   </component>
@@ -73,9 +58,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="576" />
-    <option name="width" value="797" />
-    <option name="height" value="735" />
+    <option name="x" value="1273" />
+    <option name="width" value="1294" />
+    <option name="height" value="1407" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -146,6 +131,11 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -169,24 +159,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="576" y="0" width="797" height="735" extended-state="0" />
+    <frame x="1273" y="0" width="1294" height="1407" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11686391" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -203,33 +193,55 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/toepassing_launch_page.php">
+    <entry file="file://$PROJECT_DIR$/../../../../DiveAdvisor/DiveAdvisor/php/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.88461536">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.23250201">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <marker date="1456839586053" expanded="true" signature="260:596" placeholder="..." />
-            <marker date="1456839586053" expanded="true" signature="267:310" placeholder="..." />
-            <marker date="1456839586053" expanded="true" signature="267:596" placeholder="..." />
-            <marker date="1456839586053" expanded="true" signature="409:596" placeholder="..." />
+            <marker date="1457289152853" expanded="true" signature="388:529" placeholder="select * fro... users" />
+            <marker date="1457289152853" expanded="true" signature="1285:2289" placeholder="..." />
+            <marker date="1457289152853" expanded="true" signature="1292:1299" placeholder="..." />
+            <marker date="1457289152853" expanded="true" signature="1292:1343" placeholder="..." />
+            <marker date="1457289152853" expanded="true" signature="1292:1873" placeholder="..." />
+            <marker date="1457289152853" expanded="true" signature="1898:2289" placeholder="..." />
+            <marker date="1457289152853" expanded="true" signature="2139:2289" placeholder="..." />
+            <marker date="1457289152853" expanded="true" signature="2170:2229" placeholder="..." />
+            <marker date="1457289152853" expanded="true" signature="2344:3357" placeholder="..." />
+            <marker date="1457289152853" expanded="true" signature="2412:3346" placeholder="..." />
+            <marker date="1457289152853" expanded="true" signature="2442:2680" placeholder="..." />
+            <marker date="1457289152853" expanded="true" signature="2492:2661" placeholder="..." />
+            <marker date="1457289152853" expanded="true" signature="2710:2952" placeholder="..." />
+            <marker date="1457289152853" expanded="true" signature="2760:2933" placeholder="..." />
+            <marker date="1457289152853" expanded="true" signature="2982:3330" placeholder="..." />
+            <marker date="1457289152853" expanded="true" signature="3022:3254" placeholder="..." />
+            <marker date="1457289152853" expanded="true" signature="3126:3231" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
+    <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28196147">
-          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.06838294">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <marker date="1456843643443" expanded="true" signature="474:536" placeholder="insert into users... " />
-            <marker date="1456843643443" expanded="true" signature="778:797" placeholder="..." />
-            <marker date="1456843643443" expanded="true" signature="969:985" placeholder="..." />
-            <marker date="1456843643443" expanded="true" signature="1096:1121" placeholder="..." />
-            <marker date="1456843643443" expanded="true" signature="1195:1229" placeholder="..." />
+            <marker date="1457289152857" expanded="true" signature="175:314" placeholder="select * fro... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../DiveAdvisor/DiveAdvisor/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23250201">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <marker date="1457285729530" expanded="true" signature="249:268" placeholder="select * fro... posts" />
+            <marker date="1457285729530" expanded="true" signature="645:727" placeholder="insert into USER... " />
           </folding>
         </state>
       </provider>
