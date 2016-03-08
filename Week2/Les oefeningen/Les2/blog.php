@@ -11,6 +11,7 @@ if( !empty($_POST) ){
     $statement->bindParam(":title", $title);
     $statement->bindParam(":post", $post);
     $statement->execute();
+
 }
 ?><!doctype html>
 <html lang="en">
