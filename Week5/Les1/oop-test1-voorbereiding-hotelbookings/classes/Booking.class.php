@@ -1,5 +1,5 @@
 <?php
-
+include_once ("Db.class.php");
 class Booking
 {
     private $m_sFirstname;
@@ -10,7 +10,6 @@ class Booking
     private $m_iCheckinMonth;
     private $m_iCheckoutMonth;
 
-
     public function __set($p_sProperty, $p_vValue)
     {
         switch ($p_sProperty) {
@@ -18,9 +17,8 @@ class Booking
                 if (!empty($p_vValue)) {
                     $this->m_sFirstname = $p_vValue;
                 } else {
-                    throw new Exception("Firstname can't be empty");
+                    throw new Exception("First Name cannot be empty!");
                 }
-
                 break;
             case "Lastname":
                 $this->m_sLastname = $p_vValue;
@@ -72,37 +70,30 @@ class Booking
 
     private function canBook()
     {
-        if ($this->m_iCheckoutMonth > $this->m_iCheckinMonth
+        if ($this->m_iCheckoutDay > $this->m_iCheckinMonth
             || ($this->m_iCheckinMonth == $this->m_iCheckoutMonth && $this->m_iCheckoutDay > $this->m_iCheckinDay)
         ) {
             return true;
-
         } else {
             return false;
         }
     }
 
-    public function save(){
+    public function getAll(){
+        $conn = Db::getInstance();
+        $bookings = $conn->query("select * from tblhotelbookings");
+        return $bookings;
+    }
 
-        if(!$this->canBook()){
-            throw new Exception("Booking dates are incorrect.");
-        } try{
-            $booking = new Booking();
-            $booking->Firstname = $_POST['firstname'];
-            $booking->Lastname = $_POST['lastname'];
-            $booking->Hotel = $_POST['hotel'];
-            $booking->Checkinday = $_POST['checkinday'];
-            $booking->CheckinMonth = $_POST['checkinmonth'];
-            $booking->CheckoutDay = $_POST['checkoutday'];
-            $booking->CheckoutMonth = $_POST['checkoutmonth'];
-            $booking->save();
-        } catch(Exception $e){
-            $error = $e->getMessage();
+    public function Save()
+    {
 
+        if (!$this->canBook()) {
+            throw new Exception("Booking dates are incorrect");
         }
 
-        $conn = new PDO("mysql:host=localhost; dbname=imd", "root", "");
-        $query = $conn->prepare(    "insert into tblhotelbookings (
+        $conn = Db::getInstance();
+        $query = $conn->prepare("insert into tblhotelbookings (
                                     booking_first_name,
                                     booking_last_name,
                                     booking_from_day,
@@ -117,7 +108,8 @@ class Booking
                                     :checkinmonth,
                                     :checkoutday,
                                     :checkoutmonth,
-                                    :hotel)");
+                                    :hotel)
+                                    ");
 
         $query->bindValue(":firstname", $this->m_sFirstname);
         $query->bindValue(":lastname", $this->m_sLastname);
@@ -129,6 +121,5 @@ class Booking
         return $query->execute();
     }
 }
-
 
 ?>
