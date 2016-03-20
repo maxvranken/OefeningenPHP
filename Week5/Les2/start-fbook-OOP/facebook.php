@@ -30,23 +30,23 @@ $recentActivities = $activity->GetRecentActivities();
         $(document).ready(function () {
 
             $("#btnSubmit").on("click", function (e) {
-                //message ophalen uit het textvak
-                var message = $("#activitymessage").val();
+                    //message ophalen uit het textvak
+                    var message = $("#activitymessage").val();
 
-                //AJAX call: verzenden naar PHP file(om query uit te voeren)
-                $.post( "ajax/savemessage.php", { message: message })
-                    .done(function( response ) {
-                        if(response.status == 'succes'){
-                            //uodate smooth laten verschijnen
-                            var li = "<li style='display: none;'><h2>Goodbytes.be</h2>"+message+"</li>";
-                            $("#listupdates").prepend(li);
-                            $("#listupdates li:first-child").slideDown();
-                        }
-                    });
+                    //AJAX call: verzenden naar PHP file(om query uit te voeren)
+                    $.post( "ajax/savemessage.php", { message: message })
+                        .done(function( response ) {
+                            if(response.status == 'succes'){
+                                //uodate smooth laten verschijnen
+                                var li = "<li style='display: none;'><h2>Goodbytes.be</h2>"+message+"</li>";
+                                $("#listupdates").prepend(li);
+                                $("#listupdates li:first-child").slideDown();
+                            }
+                        });
 
 
 
-                e.preventDefault();//submit tegenhouden
+                    e.preventDefault();//submit tegenhouden
             });
         });
     </script>
