@@ -1,6 +1,6 @@
 <?php 
 	include_once('classes/User.class.php');
-include_once ("../ajax/check_username.php");
+
 	if(!empty($_POST['username']))
 	{
 		try 
@@ -104,21 +104,26 @@ div.feedback
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
 <script>
-	$(document).ready(function(){
-			$(".submit").on("click", function(e){
+		$(document).ready(function(){
+			$("#username").on("keyup", function(e) {
 				var username = $("#username").val();
-				$.post( "ajax/check_username.php", { username: username}, {message: message})
-					.done(function( response ){
-						if(response.status == 'succes'){
-						//alert("Succes");
+				$(".usernameFeedback").show();
 
-							$(".feedback").css("display", "block");
-							$(".feedback").text(response.message);
-						}
-						else {
-							$(".feedback").css("display", "block");
-							$(".feedback").text(response.message);
-							//alert("Geen succes??");
+				$.post( "ajax/check_username.php", { username: username})
+					.done(function( response ){
+						$("#loadingImage").show();
+						$('.usernameFeedback span').text(response.message);
+
+						if(response.status === 'error') {
+							$('#btnSubmit').prop('disabled', true);
+							$("#loadingImage").hide();
+							$("#username").addClass("notok");
+
+						} else {
+							$('#btnSubmit').prop('disabled', false);
+							$("#username").removeClass("notok");
+							$("#username").addClass("ok");
+							$(".notok").show();
 						}
 					});
 
@@ -127,7 +132,7 @@ div.feedback
 		});
 
 
-</script>
+	</script>
 </head>
 <body>
 <?php if (isset($feedback)): ?>

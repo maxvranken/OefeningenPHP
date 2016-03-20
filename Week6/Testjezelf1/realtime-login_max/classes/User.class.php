@@ -1,9 +1,8 @@
 <?php
-
+include_once('Db.class.php');
 class User
-
 {
-	private $m_sUserName;	
+	private $m_sUserName;
 	public function __set($p_sProperty, $p_vValue)
 	{
 		switch($p_sProperty)
@@ -11,43 +10,47 @@ class User
 			case "Username":
 				$this->m_sUserName = $p_vValue;
 				break;
-		}	   
+		}
 	}
-	
+
 	public function __get($p_sProperty)
 	{
 		$vResult = null;
 		switch($p_sProperty)
 		{
-		case "Username": 
-			$vResult = $this->m_sUserName;
-			break;
+			case "Username":
+				$vResult = $this->m_sUserName;
+				break;
 		}
 		return $vResult;
 	}
-	
+
 	public function UsernameAvailable()
 	{
-		include("Connection.php"); //open connection to Dbase
-		mysqli_close($link); //close connection with Dbase
+		$PDO = Db::getInstance();
+		$stm = $PDO->prepare('SELECT * FROM tblusers WHERE user_login = :user_login');
+		$stm->bindValue(':user_login', $this->m_sUserName, $PDO::PARAM_STR);
+		$stm->execute();
+		if($stm->rowCount() > 0) {
+			return false;
+		} else {
+			return true;
+		}
 	}
-	
+
 	public function Create()
 	{
-			include("Connection.php");
-			$sSql = "insert into tblusers (user_login) values ('".mysqli_real_escape_string($link, $this->m_sUserName)."');";	
-			if ($rResult = mysqli_query($link, $sSql))
-			{	
-				//query went OK
-			}
-			else
-			{		
-				echo $sSql;			
-				// er zijn geen query resultaten, dus query is gefaald
-				throw new Exception('Caramba! Could create your account!');	
-			}					
-			mysqli_close($link);
+		$PDO = Db::getInstance();
+		$stmt = $PDO->prepare("INSERT INTO tblusers (user_login) VALUES (:user_login);");
+		$stmt->bindValue(':user_login', $this->m_sUserName, PDO::PARAM_STR);
+		if ($stmt->execute())
+		{
+
+			echo "query werkt";
+		}
+		else
+		{
+			throw new Exception('Could not be created!');
+		}
 	}
-	
 }
-?>

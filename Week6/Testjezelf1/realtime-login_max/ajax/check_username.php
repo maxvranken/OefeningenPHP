@@ -1,27 +1,20 @@
 <?php
+
 	include_once('../classes/User.class.php');
-if(!empty($_POST["username"]))
-{
-	echo "Tis ni empty";
-	$mysqli = new mysqli('localhost' , 'root', '', 'imd');
-	if ($mysqli->connect_error){
-		die('Could not connect to database!');
+$user = new User();
+if(!empty($_POST['username'])) {
+	$user->Username = $_POST['username'];
+	if($user->UsernameAvailable()) {
+		$response['status'] = 'success';
+		$response['message'] = 'Congrats, u found an original Username!';
+	} else {
+		$response['status'] = "error";
+		$response['message'] = 'Sorry, u will have to be more creative!';
 	}
 
-	$sql = "SELECT * FROM tblusers WHERE user_login = 'username'";
-	$result = mysqli_query($con,$query);
-	if(mysqli_num_rows($result)>=1)
-	{
-		$response['status'] = 'succes';
-		$response['message']= 'Naam beschikbaar';
-	}else{
-		$response['status'] = 'error';
-		$response['message'] = 'Naam niet beschikbaar';
-	}
-	header('Content-Type: application/json');
-	echo json_encode($response); // {status: 'error', message:''}
+	header('Content-type: application/json');
+	echo json_encode($response);
 }
-else echo "ist empty????";
 
 	?>
 
