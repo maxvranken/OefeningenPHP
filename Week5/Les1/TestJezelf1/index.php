@@ -20,7 +20,7 @@ if (!empty($_POST)) {
             header('Location: createpost.php');
 
         } else {
-
+            echo "foutive pass";
         }
     } else {
     }

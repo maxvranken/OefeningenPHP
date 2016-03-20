@@ -277,6 +277,16 @@ body {
 
 }
 
+
+.center{
+    width: 300px;
+    margin: 0 auto;
+}
+
+
+
+
+
 @media screen and (min-width: 400px ?? max-width: 660px) {
 
     .direction-l .desc,

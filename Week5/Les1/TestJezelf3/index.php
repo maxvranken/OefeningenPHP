@@ -2,12 +2,25 @@
 
 include_once("classes/Job.class.php");
 
+
 if (!empty($_POST)) {
-    $job = new Job();
-    $job->Name = $_POST['name'];
-    $job->Period = $_POST['period'];
-    $job->Description = $_POST['description'];
-    $job->Save();
+    if(!empty($_POST['name'])&& !empty($_POST['period'])&&!empty($_POST['description'])){
+        try {
+            $job = new Job();
+            $job->Name = $_POST['name'];
+            $job->Period = $_POST['period'];
+            $job->Description = $_POST['description'];
+            $job->Save();
+            //var_dump($_POST);
+
+        }catch(Exception $e){
+            echo $e->getMessage();
+        }
+
+}else{
+        echo "Gelieve iets in te vullen";
+    }
+
 }
 
 ?><!doctype html>
@@ -22,10 +35,10 @@ if (!empty($_POST)) {
 </head>
 <body>
 
-<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+<form class="center"<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
     <input type="text" name="name" placeholder="Job"/>
     <input type="text" name="period" placeholder="Period"/>
-    <input type="text" name="description" placeholder="Description"/>
+    <input type="text" name="description" placeholder="Description"/></br>
     <input type="submit" name="btnAdd" value="Add a job"/>
 </form>
 
@@ -45,7 +58,7 @@ if (!empty($_POST)) {
 
     <?php
     $allJobs = new Job();
-    $allJobs->GetAll();
+    $allJobs->GetAllJobs();
     ?>
 
 </ul>

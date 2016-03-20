@@ -42,22 +42,18 @@ class Job
         }
     }
 
-    public function GetAll()
+    public function GetAllJobs()
     {
 
         $conn = Db::getInstance();
-
         $jobs = $conn->query("select * from newjob");
-
         $jobs->execute();
-
         $results = $jobs->fetchAll();
 
 
         foreach ($results as $res) {
-            ;
             if (($res['id'] % 2) == 0) {
-                ; ?>
+                ?>
                 <li>
                     <div class="direction-r">
                         <div class="flag-wrapper">
@@ -68,7 +64,7 @@ class Job
                     </div>
                 </li>
             <?php } else {
-                ; ?>
+                 ?>
                 <li>
                     <div class="direction-l">
                         <div class="flag-wrapper">
