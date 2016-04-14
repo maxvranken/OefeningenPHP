@@ -1,5 +1,5 @@
 <?php
-include_once ("Db.class.php");
+include_once ("database.php");
 class Booking
 {
     private $m_sFirstname;
@@ -68,8 +68,22 @@ class Booking
         }
     }
 
+
+    public function UsernameAvailable()
+    {
+        $PDO = Db::getInstance();
+        $stm = $PDO->prepare('SELECT * FROM tblhotelbookings WHERE booking_first_name = :user_login');
+        $stm->bindValue(':user_login', $this->m_sFirstname, $PDO::PARAM_STR);
+        $stm->execute();
+        if($stm->rowCount() > 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     private function canBook()
-    {           //
+    {
         if ($this->m_iCheckoutDay > $this->m_iCheckinMonth
             || ($this->m_iCheckinMonth == $this->m_iCheckoutMonth && $this->m_iCheckoutDay > $this->m_iCheckinDay)
         ) {
@@ -79,16 +93,12 @@ class Booking
         }
     }
 
-    public function getAll(){
-        $conn = Db::getInstance();
-        $bookings = $conn->query("select * from tblhotelbookings");
-        return $bookings;
-    }
 
-    public function Save()
-    {
 
-        if (!$this->canBook()) {
+
+    public function Save(){
+
+        if(!$this->canBook()){
             throw new Exception("Booking dates are incorrect");
         }
 
@@ -121,5 +131,3 @@ class Booking
         return $query->execute();
     }
 }
-
-?>
